@@ -31,3 +31,20 @@
 - **Tasks Migration**: `e:/workspace/SRS-from-PRD/Tasks/issues/` 폴더에 있던 146개의 마크다운 태스크 문서를 `wiki/tasks/` 구조로 복사/분류 (DB, API, VIEW 등 prefix 기반)
 - **Frontmatter Addition**: Obsidian 인식을 위한 `type: task` 및 `tags` 메타데이터 부여 완료
 - **Task Indexing**: 전체 146개 태스크를 그룹핑한 `index-tasks.md` 생성 및 `wiki/index.md`에 연동. Phase 3 완료.
+
+## [2026-05-16] Strategy Pivot | B2B to SaaS
+- **SaaS Pivot Strategy**: 기존 B2B 중심 솔루션에서 범용 AI 수요예측 SaaS(PLG 모델)로의 전환을 위한 전략 문서 생성 ([saas-pivot-strategy.md](wiki/concepts/saas-pivot-strategy.md))
+- **Index Update**: `index.md` 비즈니스 전략 섹션에 피벗 전략 노드 추가
+- **SaaS Market Analysis**: 기존 B2B 5 Forces 프롬프트를 변환하여 SaaS 타겟 5 Forces 분석 문서 생성 ([saas-five-forces-market.md](wiki/concepts/business_strategy/saas-five-forces-market.md))
+- **Prompt Library**: 신규 비즈니스 기획을 위한 범용 프롬프트 저장소 신설 및 5 Forces, 경쟁사 분석 프롬프트 추가 ([business-analysis-prompts.md](wiki/prompts/business-analysis-prompts.md))
+- **SaaS Competitor Analysis**: 이커머스 플랫폼, 경량 OMS, BI 툴 등 3대 연관 시장을 도출하고 경쟁사 분석 리포트 생성 ([saas-competitor-analysis.md](wiki/concepts/business_strategy/saas-competitor-analysis.md))
+- **SaaS Value Chain & KSF**: BoxHero, Inventory Planner 등 핵심 경쟁사를 선정하여 가치사슬 분석 수행 및 SaaS 피벗용 Top 5 KSF 도출. 범용 프롬프트 라이브러리에 해당 프롬프트 업데이트 완료.
+- **SaaS Problem Definition**: SaaS 타겟 3대 시장 영역별로 고객이 겪는 핵심 문제를 정의한 문서 생성 ([saas-problem-definition.md](wiki/concepts/business_strategy/saas-problem-definition.md))
+- **SaaS Market Sizing & Segment**: 시장 규모(TAM-SAM-SOM) 산정 및 고객 세분화(Market Segmentation) 분석 완료. 해당 프롬프트를 프롬프트 라이브러리에 6번째로 추가 ([saas-tam-sam-som.md](wiki/concepts/business_strategy/saas-tam-sam-som.md))
+- **SaaS Persona Spectrum**: 시장 세분화 맵을 기반으로 핵심/확장/극단/비활성 페르소나 12명 도출 완료. 확장 페르소나의 논리적 근거(물류 소장, 도매업자 등 Value Chain 후방 인프라) 보강. 프롬프트 라이브러리에 7번째로 추가 ([saas-persona-spectrum.md](wiki/concepts/business_strategy/saas-persona-spectrum.md))
+- **SaaS Primary Persona & CJM**: 4가지 기준(현실성, 차별성, 통찰성, 전략성)으로 최우선 페르소나(이지훈)를 도출하고, SaaS PLG 맥락에 맞춘 5단계 고객 여정 지도(CJM) 작성. 해당 프롬프트 2개를 라이브러리(8, 9번)에 추가 완료. ([saas-primary-persona.md](wiki/concepts/business_strategy/saas-primary-persona.md), [saas-cjm.md](wiki/concepts/business_strategy/saas-cjm.md))
+- **SaaS AOS Matrix Analysis**: 페르소나 및 CJM에서 도출된 Pain Point들에 대해 조정형 기회점수(AOS)를 산출하고 사분면 매트릭스를 그려 MVP 최우선 개발 영역(Q1) 도출. 라이브러리에 프롬프트 10번으로 추가 완료. ([saas-aos-analysis.md](wiki/concepts/business_strategy/saas-aos-analysis.md))
+- **SaaS DOS Matrix Analysis**: AOS 점수에 시장 규모(TAM%) 가중치를 곱해 실제 시장의 파급력을 구하는 DOS(발견된 기회점수) 방법론 적용. AOS-DOS 비교 매트릭스를 시각화하여 MVP 타겟 우선순위 교차 검증 완료. 프롬프트 11번 라이브러리 추가. ([saas-dos-analysis.md](wiki/concepts/business_strategy/saas-dos-analysis.md))
+- **SaaS JTBD Interview Plan**: 최우선 페르소나의 '전환 사건'과 '4 Forces'를 검증하기 위한 6단계 JTBD 심층 인터뷰 계획 및 결과(가상) 요약 카드 생성. 라이브러리에 프롬프트 12번으로 추가. ([saas-jtbd-interview.md](wiki/concepts/business_strategy/saas-jtbd-interview.md))
+- **SaaS Value Proposition Sheet**: 타겟 페르소나, JTBD 분석, AOS/DOS 매트릭스를 종합하여 솔루션의 핵심 차별적 가치를 정의한 한 장의 제안서(VPS) 작성 완료. 랜딩페이지 카피 포함. 프롬프트 13번 추가. ([saas-value-proposition-sheet.md](wiki/concepts/business_strategy/saas-value-proposition-sheet.md))
+- **SaaS PRD v1.0**: PRD 및 PRD 품질 검증 프롬프트 2종(14, 15번)을 라이브러리에 추가. VPS를 기반으로 NFR(비기능 요구사항), 의존성, MoSCoW, On-call 모니터링 체계 등 엔지니어링 방어 디테일이 완벽히 포함된 고품질 PRD v1.0 문서 생성 완료. ([saas-prd-v1.md](wiki/concepts/business_strategy/saas-prd-v1.md))
