@@ -48,3 +48,4 @@
 - **SaaS JTBD Interview Plan**: 최우선 페르소나의 '전환 사건'과 '4 Forces'를 검증하기 위한 6단계 JTBD 심층 인터뷰 계획 및 결과(가상) 요약 카드 생성. 라이브러리에 프롬프트 12번으로 추가. ([saas-jtbd-interview.md](wiki/concepts/business_strategy/saas-jtbd-interview.md))
 - **SaaS Value Proposition Sheet**: 타겟 페르소나, JTBD 분석, AOS/DOS 매트릭스를 종합하여 솔루션의 핵심 차별적 가치를 정의한 한 장의 제안서(VPS) 작성 완료. 랜딩페이지 카피 포함. 프롬프트 13번 추가. ([saas-value-proposition-sheet.md](wiki/concepts/business_strategy/saas-value-proposition-sheet.md))
 - **SaaS PRD v1.0**: PRD 및 PRD 품질 검증 프롬프트 2종(14, 15번)을 라이브러리에 추가. VPS를 기반으로 NFR(비기능 요구사항), 의존성, MoSCoW, On-call 모니터링 체계 등 엔지니어링 방어 디테일이 완벽히 포함된 고품질 PRD v1.0 문서 생성 완료. ([saas-prd-v1.md](wiki/concepts/business_strategy/saas-prd-v1.md))
+- **SaaS SRS v1.0**: ISO/IEC/IEEE 29148:2018 표준 기반의 SRS 작성 프롬프트(16번) 라이브러리 추가 및 PRD v1.0을 엔지니어링 스펙으로 치환한 시스템 요구사항 명세서 대폭 보강 생성. 비동기 폴링 큐 시퀀스 맵, API 엔드포인트 명세, ERD 확장 및 C-TEC 기술 스택 제약사항(FastAPI, Celery, React 등) 전면 적용 완료. ([SRS-V1.0.md](wiki/concepts/architecture/SRS-Drafts/SRS-V1.0.md))

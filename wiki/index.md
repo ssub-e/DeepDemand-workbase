@@ -4,6 +4,7 @@
 
 ## Concepts (개념 및 아키텍처)
 ### Business Strategy (비즈니스 전략)
+- [DeepDemand SaaS SRS v1.0 (소프트웨어 요구사항 명세서)](wiki/concepts/architecture/SRS-Drafts/SRS-V1.0.md)
 - [DeepDemand SaaS PRD v1.0 (제품 요구사항 정의서)](wiki/concepts/business_strategy/saas-prd-v1.md)
 - [SaaS 가치 제안서 (Value Proposition Sheet)](wiki/concepts/business_strategy/saas-value-proposition-sheet.md)
 - [SaaS JTBD 심층 인터뷰 계획 및 결과 (Jobs-to-be-Done)](wiki/concepts/business_strategy/saas-jtbd-interview.md)

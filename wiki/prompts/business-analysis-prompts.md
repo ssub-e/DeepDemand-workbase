@@ -207,17 +207,85 @@ updated: 2026-05-16
 **사용처**: 시장 세분화(Market Segment) 결과를 바탕으로, 우리의 핵심 타겟뿐만 아니라 확장, 극단, 비활성 사용자까지 포함한 다양한 스펙트럼의 구체적인 가상 고객(Persona)들을 정의할 때 사용합니다. (PARTS C 구성)
 
 ```text
-- **P (Persona - 역할)**: 당신은 사용자 중심 설계와 고객 여정 분석에 특화된 최고 수준의 UX 리서처이자 프로덕트 오너(PO)이다.
-- **A (Aim - 목표 및 수행)**: 당신의 과업은 앞서 도출한 [시장 세그먼트 매트릭스]의 각 사분면(Q1~Q4) 특성과 매핑하여, '핵심(Core), 확장(Adjacent), 극단(Extreme), 비활성(Non-user)'의 4가지 유형으로 구성된 고객 페르소나 스펙트럼을 도출하는 것이다. 각 페르소나에 대해 가상의 이름, 직무/역할, 주요 문제/결핍, 목표, 감정, 대체 솔루션을 포함해 상세히 작성하라.
-- **R (Recipients - 대상 독자)**: 솔루션의 UI/UX와 기능을 직접 설계하고 개발하는 디자이너 및 개발팀이다. 이들은 페르소나를 보고 "아, 이런 상황에서 이런 버튼을 누르겠구나"를 직관적으로 이해할 수 있어야 한다.
-- **T (Theme - 주요 방향 & 톤)**: 너무 추상적인 묘사보다는 구체적이고 실무적인 맥락(예: 매일 아침 9시에 엑셀을 켜는 상황)을 부여하라. 특히 '확장(Adjacent)' 페르소나가 기존 세그먼트 맵에서 어떻게 파생될 수 있는지 논리적 연결고리를 분명히 밝혀라. 공감과 감정 이입이 가능한 인간적인 어조를 사용하되, 정보 전달은 체계적인 포맷을 따른다.
+- **P (Persona - 역할)**: 당신은 사용자 중심 설계와 고객 여정 분�## 16. 소프트웨어 요구사항 명세서 (SRS) 작성 프롬프트 (ISO/IEC/IEEE 29148:2018 준수)
+
+**사용처**: 확정된 PRD를 기반으로 개발 및 테스트의 기준이 되는 완전한 엔지니어링 명세서(SRS)를 작성할 때 사용합니다. 
+
+```text
+- **P (Persona - 역할)**: 당신은 ISO/IEC/IEEE 29148:2018 표준에 정통한 Senior Requirements Engineer이다.
+- **A (Aim - 목표 및 수행)**: 내가 제공하는 PRD(Product Requirements Document)를 기반으로 완전하고 상세하며, 테스트 가능하고, 추적 가능한 SRS(Software Requirements Specification)를 작성하라.
+- **R (Recipients - 대상 독자)**: 시스템 아키텍트, 백엔드/프론트엔드 엔지니어, 데이터 엔지니어 및 QA 팀이다.
+- **T (Theme - 주요 방향 & 톤)**: 공식 문서 스타일로 정확하고 간결하게 작성하라. '빠르게, 적절히' 등의 모호한 표현을 금지하며 측정 가능한 요구사항만 적어라.
 - **S (Structure - 구조 및 출력 형식)**: 
-  총 12명의 페르소나를 다음 분포로 생성하라: 핵심(5명), 확장(3명), 극단(2명), 비활성(2명).
+  다음 구조와 규칙을 절대 준수하여 마크다운 파일로 출력하라.
   
-  [출력 포맷]
-  ### [페르소나 유형명 (예: 핵심(Core))]
-  **1. [가상 이름] ([직무/역할, 연령대])**
-  - **매핑된 세그먼트**: (예: Q1 테크 사비 셀러)
+  # Software Requirements Specification (SRS)
+  Document ID: SRS-<자동 번호>
+  Revision: 1.0
+  Date: <오늘 날짜>
+  Standard: ISO/IEC/IEEE 29148:2018
+  
+  1. Introduction
+     1.1 Purpose (PRD 문제 정의 매핑)
+     1.2 Scope (In-Scope / Out-of-Scope 명시)
+     1.3 Definitions, Acronyms, Abbreviations
+     1.4 References (REF-XX 형식)
+  
+  2. Stakeholders
+     - 역할(Role), 책임(Responsibility), 관심사(Interest) 매핑
+  
+  3. System Context and Interfaces
+     3.1 External Systems
+     3.2 Client Applications
+     3.3 API Overview
+     3.4 Interaction Sequences (핵심 시퀀스 다이어그램 Mermaid 포함)
+  
+  4. Specific Requirements
+     4.1 Functional Requirements (테이블 필수)
+        - ID: REQ-FUNC-xxx
+        - Source: Story/기능 출처 명시
+        - Acceptance Criteria: Given/When/Then 구조 및 수치 포함
+        - Priority: MoSCoW 기반 반영
+     4.2 Non-Functional Requirements (테이블 필수)
+        - ID: REQ-NF-xxx
+        - 성능, 가용성, 보안, 비용, 운영/모니터링 지표 수치화
+  
+  5. Traceability Matrix
+     - Story ↔ Requirement ID ↔ Test Case ID 매핑
+  
+  6. Appendix
+     6.1 API Endpoint List
+     6.2 Entity & Data Model (표 형식 필수)
+     6.3 Detailed Interaction Models (상세 시퀀스 다이어그램 Mermaid 포함)
+
+- **C (Context - 주요 맥락 및 자료)**: 
+  ### [PRD → SRS 매핑 규칙 (필수 준수)]
+  1) PRD 1. 목표 → SRS 1.1 Purpose 및 4.2 NFR 정량 기준 매핑
+  2) PRD 2. 사용자 → SRS 2. Stakeholder 역할 변환
+  3) PRD 3/4. 스토리/기능 → SRS 4.1 Functional Reqs 분해 (Source 명시)
+  4) PRD 5. 성능/품질 → SRS 4.2 Non-Functional Reqs (수치 임계치 포함)
+  5) PRD 6. 데이터/기술 → SRS 3. System Context 및 Appendix Data Model
+  6) PRD 7. 제약사항 → SRS 1.2 Scope 및 Constraints/Assumptions 통합
+  7) PRD 8/9. 검증 및 근거 → SRS 4.2 NFR 반영 및 References (REF-XX) 연결
+
+  ### [SRS 생성 시 10대 필수 수칙]
+  1) Story는 Functional Requirement의 Source로 반드시 연결한다.
+  2) F1~F6 주요 기능은 반드시 여러 개의 REQ-FUNC로 분해한다.
+  3) p95, SLA, 단위 처리 비용 등 모든 성능 수치는 NFR로 이동한다.
+  4) 모든 API는 System Context와 Appendix 모두에 기재한다.
+  5) 모든 엔터티/데이터 모델은 반드시 표로 구조화한다.
+  6) 시퀀스 다이어그램은 SRS 3.4와 Appendix 6.3 두 곳에 포함한다.
+  7) In/Out Scope는 SRS 1.2에 반드시 명시한다.
+  8) ADR·리스크·가정은 Constraints/Assumptions로 통합한다.
+  9) References는 반드시 REF-XX 형식 ID로 연결한다.
+  10) 모든 요구사항은 ID(REQ-FUNC-xxx / REQ-NF-xxx)를 가진 atomic requirement로 작성한다.
+
+  [리뷰 및 작성을 위한 PRD 원문은 다음과 같다.]
+  (여기에 PRD 텍스트 붙여넣기)
+```
+
+*(이후 Task 추출, Prototype 가이드라인, 마케팅 랜딩페이지 카피 도출 등 전체 파이프라인 진행에 필요한 프롬프트를 추가할 수 있습니다.)*
+�크 사비 셀러)
   - **사용 맥락(Context)**: (이들이 일하는 환경, 하루 일과)
   - **주요 문제/결핍(Pain points)**: (구체적 상황에서의 불편함)
   - **목표(Goals)**: (제품을 통해 얻고 싶은 최종 가치)
@@ -415,4 +483,36 @@ updated: 2026-05-16
   [작성된 PRD 텍스트 통째로 붙여넣기]
 ```
 
-*(이후 시스템 아키텍처 설계, API 명세서 작성 등 개발 본궤도 진입을 위한 프롬프트들도 추가해 나갈 수 있습니다.)*
+## 16. 소프트웨어 요구사항 명세서 (SRS) 작성 프롬프트
+
+**사용처**: 확정된 PRD를 바탕으로 ISO/IEC/IEEE 29148:2018 표준을 준수하는 완벽하고 추적 가능한 엔지니어링 명세서(SRS)를 작성할 때 사용합니다. (PARTS C 구성)
+
+```text
+- **P (Persona - 역할)**: 당신은 ISO/IEC/IEEE 29148:2018 표준에 정통한 Senior Requirements Engineer이다.
+- **A (Aim - 목표 및 수행)**: Context에 제공된 PRD 문서를 기반으로, 완전하고 상세하며 테스트 및 추적이 가능한 SRS(Software Requirements Specification)를 작성하라.
+- **R (Recipients - 대상 독자)**: 데이터베이스, API, 아키텍처 설계를 직접 구현해야 하는 시스템 아키텍트, 백엔드/프론트엔드/데이터 엔지니어 및 QA 팀이다.
+- **T (Theme - 주요 방향 & 톤)**: 공식 문서 스타일로 정확하고 간결하게 작성하라. '빠르게, 적절히' 등의 모호한 표현을 금지하며 측정 가능한 요구사항만 적어라.
+- **S (Structure - 구조 및 출력 형식)**: 
+  다음 구조를 반드시 준수하여 마크다운 파일로 출력하라.
+  
+  # Software Requirements Specification (SRS)
+  Document ID: SRS-<자동 번호>
+  Revision: 1.0
+  Date: <오늘 날짜>
+  Standard: ISO/IEC/IEEE 29148:2018
+  
+  1. Introduction (Purpose, Scope, Definitions, References)
+  2. Stakeholders (Role, Responsibility, Interest)
+  3. System Context and Interfaces (External Systems, Client Apps, API Overview, Interaction Sequences with Mermaid)
+  4. Specific Requirements
+     4.1 Functional Requirements (테이블 형태, ID: REQ-FUNC-xxx, Story Source, AC, Priority 명시)
+     4.2 Non-Functional Requirements (테이블 형태, ID: REQ-NF-xxx, 성능/가용성/보안/모니터링 명시)
+  5. Traceability Matrix (Story ↔ Requirement ID ↔ Test Case ID)
+  6. Appendix (API Endpoint List, Entity & Data Model 테이블, Detailed Interaction Models Mermaid 차트)
+  
+- **C (Context - 주요 맥락 및 자료)**: 
+  우리의 핵심 비즈니스 요구사항인 PRD 원문은 다음과 같다. 이를 유일한 비즈니스/기능 요구의 원천(Source of Truth)으로 삼아 매핑 규칙에 따라 작성하라.
+  [이전에 작성한 PRD 텍스트 통째로 붙여넣기]
+```
+
+*(이후 Task 추출, Prototype 가이드라인, 마케팅 랜딩페이지 카피 도출 등 전체 파이프라인 진행에 필요한 프롬프트를 추가할 수 있습니다.)*
