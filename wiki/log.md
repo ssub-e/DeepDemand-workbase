@@ -49,3 +49,16 @@
 - **SaaS Value Proposition Sheet**: 타겟 페르소나, JTBD 분석, AOS/DOS 매트릭스를 종합하여 솔루션의 핵심 차별적 가치를 정의한 한 장의 제안서(VPS) 작성 완료. 랜딩페이지 카피 포함. 프롬프트 13번 추가. ([saas-value-proposition-sheet.md](wiki/concepts/business_strategy/saas-value-proposition-sheet.md))
 - **SaaS PRD v1.0**: PRD 및 PRD 품질 검증 프롬프트 2종(14, 15번)을 라이브러리에 추가. VPS를 기반으로 NFR(비기능 요구사항), 의존성, MoSCoW, On-call 모니터링 체계 등 엔지니어링 방어 디테일이 완벽히 포함된 고품질 PRD v1.0 문서 생성 완료. ([saas-prd-v1.md](wiki/concepts/business_strategy/saas-prd-v1.md))
 - **SaaS SRS v1.0**: ISO/IEC/IEEE 29148:2018 표준 기반의 SRS 작성 프롬프트(16번) 라이브러리 추가 및 PRD v1.0을 엔지니어링 스펙으로 치환한 시스템 요구사항 명세서 대폭 보강 생성. 비동기 폴링 큐 시퀀스 맵, API 엔드포인트 명세, ERD 확장 및 C-TEC 기술 스택 제약사항(FastAPI, Celery, React 등) 전면 적용 완료. ([SRS-V1.0.md](wiki/concepts/architecture/SRS-Drafts/SRS-V1.0.md))
+
+## [2026-05-18] Wiki Restructuring | AGENTS.md Compliance
+- **Directory Structure Update**: `llm-wiki..md` 및 `AGENTS.md` 구조에 맞춰 `wiki/sources/`, `wiki/entities/`, `wiki/tasks/` 폴더를 신설 및 정비
+- **Task Migration**: `wiki/concepts/architecture/TASKS` 경로를 `wiki/tasks`로 이동시키고, `TASK-V1.0.md`를 `index-tasks.md`로 변경 및 프론트매터 추가
+- **Entity Categorization**: 비즈니스 전략 내의 페르소나 관련 문서들(`saas-persona-spectrum.md`, `saas-primary-persona.md`, `saas-jtbd-interview.md`)을 `wiki/entities/personas/`로 이동
+- **Index Update**: `wiki/index.md` 내의 기존 B2B 문서 링크들을 `Legacy` 카테고리(`_legacy_b2b/` 경로)로 분리하고, 신규 SaaS 문서들의 경로 매핑을 최신화
+
+## [2026-05-19] Wiki Audit & Path Alignment | DeepDemand-workbase Review
+- **Broken Links Cleaned**: `wiki/index.md` 파일에서 B2B 레거시 문서로 향하는 9개의 깨진 경로(개념, 제품지표, 시스템아키텍처, 고객여정 등)를 물리적 위치(`_legacy_b2b/` 하위 디렉토리)에 맞춰 일괄 전수 수정 완료
+- **Universal Relative Link Format**: 모든 위키 상호 연결 링크 형식을 `wiki/` 접두사 기반에서 범용 표준 상대 경로인 `./` 접두사 기반으로 정비하여 Obsidian, VS Code, Github, Cursor 등 모든 도구 및 환경에서의 호환성 확보
+- **Active / Legacy Segregation**: 최신 SaaS 관련 핵심 기획/전략/아키텍처 문서와 구 B2B 레거시 참조용 문서를 명확히 구획하여 카탈로그의 시인성 및 신뢰도 극대화
+- **Missing Draft Indexed**: 누락되어 있던 아키텍처 초안 분할 작성 계획서(`SRS-build-plan.md`)를 액티브 인덱스에 연동 완료
+

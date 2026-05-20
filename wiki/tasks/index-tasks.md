@@ -1,3 +1,9 @@
+---
+type: task
+tags: [index, mvp, saas]
+created: 2026-05-18
+updated: 2026-05-18
+---
 # DeepDemand SaaS MVP - Github Project Task Breakdown (V1.0)
 
 > 본 문서는 `SRS-V1.0.md`의 요구사항을 바탕으로, **Data & Contract First ➔ Read/Write Isolation ➔ Test Validation** 추출 전략에 따라 작성된 최종 개발 태스크 명세서입니다. 깃허브 프로젝트(Github Projects) 또는 Jira에 일괄 등록(Import)하여 스프린트 계획을 수립하는 데 최적화되어 있습니다.
