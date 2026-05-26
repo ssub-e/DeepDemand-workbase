@@ -8,6 +8,7 @@
 ## 🚀 Active SaaS Documentation (최신 SaaS 문서)
 
 ### 1. Business Strategy (비즈니스 전략 및 기획)
+- [DeepDemand 비즈니스 핵심 요약본](../business_summary.md)
 - [DeepDemand SaaS PRD v1.0 (제품 요구사항 정의서)](./concepts/business_strategy/saas-prd-v1.md)
 - [SaaS 가치 제안서 (Value Proposition Sheet)](./concepts/business_strategy/saas-value-proposition-sheet.md)
 - [B2B에서 범용 SaaS로의 전환 전략 (Pivot Strategy)](./concepts/saas-pivot-strategy.md)

@@ -62,3 +62,10 @@
 - **Active / Legacy Segregation**: 최신 SaaS 관련 핵심 기획/전략/아키텍처 문서와 구 B2B 레거시 참조용 문서를 명확히 구획하여 카탈로그의 시인성 및 신뢰도 극대화
 - **Missing Draft Indexed**: 누락되어 있던 아키텍처 초안 분할 작성 계획서(`SRS-build-plan.md`)를 액티브 인덱스에 연동 완료
 
+## [2026-05-21] Ingest & Strategy Alignment | business_summary.md SaaS Update
+- **SaaS Alignment**: 루트 디렉터리의 `business_summary.md` 문서를 최신 SaaS 피벗 스펙(Zero-Friction 엑셀 업로드, XAI 대시보드, SME 셀러 대표 이지훈 페르소나)에 맞춰 전면 개정 완료
+- **Obsidian Wiki Compliance**: `RULE[AGENTS.md]` 규격에 맞춰 `business_summary.md`에 Frontmatter YAML 및 `## Related` 교차 참조 링크 추가
+- **Legacy Preservation**: 구 B2B 구축형 모델(MD 김아름, 3PL 센터장 정동환 및 스마트 인건비 옵티마이저)의 핵심 개념을 "구 B2B 레거시 히스토리" 섹션으로 별도 요약/보존하여 미래 엔터프라이즈 확장 시 설계 기반으로 활용할 수 있도록 함
+- **Vertical Domain Expansion & Persona Safeguard**: 단일 페르소나 채택에 따른 범용성 약화 우려를 완벽하게 해소하기 위해, 이지훈 페르소나의 다품종 대표성을 재정의하고 쿠팡 로켓그로스, 뷰티, 리빙 등 다양한 페르소나 스펙트럼과의 연결성을 강화함. 또한 패션, 뷰티, 푸드, 리빙, 공구 등 5대 버티컬 영역별 고유 문제 및 AI 예측 맞춤 가치를 서술한 "다양한 사업 분야별 지원 범위(Vertical Domain Coverage)" 섹션을 추가함
+
+
