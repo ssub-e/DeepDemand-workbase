@@ -68,4 +68,14 @@
 - **Legacy Preservation**: 구 B2B 구축형 모델(MD 김아름, 3PL 센터장 정동환 및 스마트 인건비 옵티마이저)의 핵심 개념을 "구 B2B 레거시 히스토리" 섹션으로 별도 요약/보존하여 미래 엔터프라이즈 확장 시 설계 기반으로 활용할 수 있도록 함
 - **Vertical Domain Expansion & Persona Safeguard**: 단일 페르소나 채택에 따른 범용성 약화 우려를 완벽하게 해소하기 위해, 이지훈 페르소나의 다품종 대표성을 재정의하고 쿠팡 로켓그로스, 뷰티, 리빙 등 다양한 페르소나 스펙트럼과의 연결성을 강화함. 또한 패션, 뷰티, 푸드, 리빙, 공구 등 5대 버티컬 영역별 고유 문제 및 AI 예측 맞춤 가치를 서술한 "다양한 사업 분야별 지원 범위(Vertical Domain Coverage)" 섹션을 추가함
 
+## [2026-05-26] Conflict Resolution & Hybrid Integration | business_summary.md Merge
+- **Conflict Resolved**: 외부 `landing-page-prompt-guide.md` 작성 중 수정된 요약서와 이전에 정립된 최신 SaaS 피벗 스펙(페르소나의 다품종 대표성 및 5대 버티컬 지원 영역, 레거시 B2B 보존) 간의 Git 충돌을 안전하게 전량 해결함
+- **Hybrid Integration**: 이지훈 페르소나의 다품종 대표성 묘사 및 Obsidian 상대 경로 Deep Link를 완벽히 유지하면서, 새로 유입된 고해상도 지표(Pain AOS 3.0 / DOS 2.4, 구체적 TAM-SAM-SOM 규모, 4 Forces & Switch Trigger, CJM 5단계 상세 표, CTA 마케팅 설계 카피)를 누락 없이 100% 통합 병합 완료함
+- **Strategy & Tech Sync (SSOT)**: 병합된 요약본의 최신 기획 사항(이지훈 대표성 및 5대 버티컬 AI 스펙)을 `raw/` 불변성 규칙을 수호하며 `wiki/` 하위 원천 설계 문서들로 역전파 완료함
+  - `saas-primary-persona.md`: 이지훈 대표성 보완 및 JTBD 4 Forces/Switch Trigger/생생한 감정 묘사 결합 동기화
+  - `saas-prd-v1.md` (PRD v1.0): 기능 MoSCoW 내 F4 보관비용 누수 경고 추가 및 7-5 버티컬 지원 범위 5대 분야 스펙 신설 동기화
+  - `SRS-V1.0.md`: API-05 반환 파라미터(`estimated_storage_fee`, `is_expiration_risk`) 반영, DB ERD 및 테이블 정의 명세 보완 동기화
+
+
+
 

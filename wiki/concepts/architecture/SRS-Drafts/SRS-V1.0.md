@@ -491,7 +491,7 @@ sequenceDiagram
 | API-02 | POST | `/api/v1/forecast/upload` | JWT | `file` (multipart) | `{result_id, parsed_row_count, status}` | Max 10MB, .xlsx 및 .csv 전용, Timeout 15s | REQ-FUNC-001~006 |
 | API-03 | POST | `/api/v1/forecast/{result_id}/start` | JWT | — | `{result_id, status: "processing"}` | plan_tier에 따른 Quota 검증 작동 | REQ-FUNC-007, 023 |
 | API-04 | GET | `/api/v1/forecast/{result_id}/status` | JWT | — | `{result_id, status}` | 폴링 간격 권장 2s | REQ-FUNC-011 |
-| API-05 | GET | `/api/v1/forecast/{result_id}` | JWT | — | `{forecasts: [{sku, recommended_qty, current_stock, is_overstock, is_stockout_risk, factors:[]}]}` | tenant_id 검증 필수 | REQ-FUNC-008~014, 020, 021 |
+| API-05 | GET | `/api/v1/forecast/{result_id}` | JWT | — | `{forecasts: [{sku, recommended_qty, current_stock, is_overstock, is_stockout_risk, estimated_storage_fee, is_expiration_risk, factors:[]}]}` | tenant_id 검증 필수 (버티컬 특화 속성 반영) | REQ-FUNC-008~014, 020, 021 |
 | API-06 | GET | `/api/v1/forecast/{result_id}/export` | JWT | — | `Binary File Stream` | 3PL/도매처 포맷팅 파일 다운로드 | REQ-FUNC-019 |
 | API-07 | POST | `/api/v1/billing/checkout` | JWT | `{plan_tier}` | `{checkout_url}` | Toss/Stripe 연동용 세션 생성 | pivot §2.4 |
 | API-08 | POST | `/api/v1/billing/webhook` | — | `{event, payload}` | `{status: "ok"}` | 결제 완료 테넌트 승격 | pivot §2.4 |
@@ -557,6 +557,8 @@ erDiagram
         integer current_stock
         boolean is_overstock "current_stock > recommended × 1.5"
         boolean is_stockout_risk "current_stock < 3일 누적 예측 판매량"
+        integer estimated_storage_fee "예상 창고 보관료 비용 (홈/리빙)"
+        boolean is_expiration_risk "유통기한 내 폐기 위험 여부 (식품/밀키트)"
     }
     XAI_FACTOR {
         uuid id PK
@@ -575,7 +577,7 @@ erDiagram
 | **DAILY_SALES_HISTORY** | `id` (UUID) | tenant_id(FK), sku_name, date, sales_qty, created_at | N:1 TENANT | REQ-FUNC-017 |
 | **UPLOAD_LOG** | `id` (UUID) | tenant_id(FK), uploaded_at, parsed_row_count, is_success, error_message | N:1 TENANT | REQ-FUNC-016, REQ-NF-006 |
 | **FORECAST_RESULT** | `id` (UUID) | tenant_id(FK), target_date, status, is_fallback, confidence_level, created_at | N:1 TENANT, 1:N SKU_METRICS | REQ-FUNC-007~011, 020 |
-| **SKU_METRICS** | `id` (UUID) | result_id(FK), sku_name, recommended_qty, current_stock, is_overstock, is_stockout_risk | N:1 FORECAST_RESULT, 1:N XAI_FACTOR | REQ-FUNC-008, 010, 014, 021 |
+| **SKU_METRICS** | `id` (UUID) | result_id(FK), sku_name, recommended_qty, current_stock, is_overstock, is_stockout_risk, estimated_storage_fee, is_expiration_risk | N:1 FORECAST_RESULT, 1:N XAI_FACTOR | REQ-FUNC-008, 010, 014, 021 |
 | **XAI_FACTOR** | `id` (UUID) | sku_metric_id(FK), factor_name, impact_score | N:1 SKU_METRICS | REQ-FUNC-012, 013 |
 
 ### 6.3 Detailed Interaction Models (상세 시퀀스 다이어그램)
