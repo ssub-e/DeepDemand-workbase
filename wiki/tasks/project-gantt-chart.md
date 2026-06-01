@@ -30,16 +30,16 @@ gantt
     TSK-MCK-01: Mocking API 구축               :active, mck1, after api2, 2d
     
     section Phase 2 (Parallel A): 백엔드 API & ML 파이프라인
-    TSK-CMD-01: JWT 인증 미들웨어               :active, cmd1, after db1 api1, 3d
-    TSK-CMD-09: Plan Quota 검증 미들웨어         :active, cmd9, after db1 api2, 3d
+    TSK-CMD-01: JWT 인증 미들웨어               :active, cmd1, after api1, 3d
+    TSK-CMD-09: Plan Quota 검증 미들웨어         :active, cmd9, after api2, 3d
     TSK-CMD-02: 엑셀 파싱 및 기본 검증           :active, cmd2, after api2, 3d
     TSK-CMD-03: 컬럼 정규식 매핑                 :active, cmd3, after cmd2, 4d
-    TSK-CMD-04: DB 이력 누적 적재                :active, cmd4, after cmd3 db2, 3d
+    TSK-CMD-04: DB 이력 누적 적재                :active, cmd4, after cmd3, 3d
     TSK-CMD-05: 비동기 예측 큐잉 트리거           :active, cmd5, after cmd4, 3d
     TSK-CMD-06: 날씨 및 트렌드 수집             :active, cmd6, after cmd5, 4d
     TSK-CMD-07: LightGBM & Fallback 분기       :active, cmd7, after cmd6, 4d
     TSK-CMD-08: SHAP 분석 및 Gemini 자연어 XAI    :active, cmd8, after cmd7, 4d
-    TSK-QRY-01: 예측결과 폴링 및 리스트 조회       :active, qry1, after db2 api2, 3d
+    TSK-QRY-01: 예측결과 폴링 및 리스트 조회       :active, qry1, after db2, 3d
     TSK-QRY-02: 발주 파일 내보내기 (Download)     :active, qry2, after qry1, 2d
     
     section Phase 2 (Parallel B): 프론트엔드 UI/UX (Next.js)
@@ -53,7 +53,7 @@ gantt
     TSK-TST-04: QA 파서 정확도 및 맵핑 테스트     :active, tst4, after cmd4, 2d
     TSK-TST-05: QA Fallback 분기 테스트         :active, tst5, after cmd7, 2d
     TSK-TST-02: QA Free 요금제 한도 차단 테스트   :active, tst2, after cmd9, 2d
-    TSK-TST-03: QA Multi-Tenant 격리성 테스트    :active, tst3, after cmd1 qry1, 3d
+    TSK-TST-03: QA Multi-Tenant 격리성 테스트    :active, tst3, after qry1, 3d
     TSK-NFR-02: S3 임시파일 24h TTL Cronjob     :active, nfr2, after cmd2, 2d
     TSK-NFR-03: Slack Webhook 알럿 파이프라인    :active, nfr3, after scaffold, 3d
     TSK-NFR-04: API 응답/예측 k6 부하 테스트      :active, nfr4, after qry1, 3d
